@@ -13,7 +13,7 @@ attr_accessor :name
     @@all
   end
 
-  def add_song(song)
+  def self.add_song(song)
     song.artist = self
   end
 
