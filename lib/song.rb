@@ -8,6 +8,10 @@ attr_accessor :name, :artist
     @@all << self
   end
 
+  def artist_name=(name)
+    self.artist = Artist.find_or_create_by_name(name)
+  end
+
   def self.all
     @@all
   end
