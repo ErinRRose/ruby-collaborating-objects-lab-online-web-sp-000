@@ -23,7 +23,7 @@ attr_accessor :name, :artist
     #create song
     song = Song.new(song_name)
     #add song to Artist
-    song.add_song(artist)
+    artist.add_song(song)
     #return new song
     song
 
