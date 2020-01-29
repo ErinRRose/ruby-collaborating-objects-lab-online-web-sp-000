@@ -12,7 +12,7 @@ attr_accessor :name, :artist
     @@all
   end
 
-  def new_by_filename(filename)
+  def self.new_by_filename(filename)
     #artist - song_name - genre.mp3
     #artist
     #song_name
