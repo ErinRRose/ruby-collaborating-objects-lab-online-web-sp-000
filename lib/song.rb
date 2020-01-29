@@ -20,7 +20,7 @@ attr_accessor :name, :artist
     song_name = filename.split(' - ')[1]
     new_song = Song.new(song_name)
     new_song.artist = artist
-    artist.add_song(new_song)
+    Artist.add_song(new_song)
     new_song
 
 
