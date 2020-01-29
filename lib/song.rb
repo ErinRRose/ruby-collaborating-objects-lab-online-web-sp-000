@@ -22,7 +22,7 @@ attr_accessor :name, :artist
     new_song.artist = artist
     artist.add_song(new_song)
     new_song
-    
+
 
   end
 
