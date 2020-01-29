@@ -16,13 +16,16 @@ attr_accessor :name, :artist
     #artist - song_name - genre.mp3
     #artist
     #song_name
-    artist = filename.split(' - ')[0]
+    artist_name = filename.split(' - ')[0]
     song_name = filename.split(' - ')[1]
-    new_song = Song.new(song_name)
-    new_song.artist = artist
-    Artist.add_song(new_song)
-    new_song
-
+    #create or get artist
+    artist = Artist.find_or_create_by_name(artist_name)
+    #create song
+    song = Song.new(song_name)
+    #add song to Artist
+    song.add_song(artist)
+    #return new song
+    song
 
   end
 
